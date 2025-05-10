@@ -73,8 +73,8 @@
 
 ```bash
 # Clone the repository
-git clone https://github.com/yourusername/weather-app.git
-cd weather-app
+git clone https://github.com/SabutayBSandalci/sabution-weather.git
+cd sabution-weather
 
 # Install dependencies
 npm install
