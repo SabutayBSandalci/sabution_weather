@@ -73,7 +73,7 @@
 
 ```bash
 # Clone the repository
-git clone https://github.com/SabutayBSandalci/sabution-weather.git
+git clone https://github.com/SabutayBSandalci/sabution_weather.git
 cd sabution-weather
 
 # Install dependencies
