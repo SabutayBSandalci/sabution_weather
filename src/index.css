@@ -1,13 +1,55 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html, body {
+    @apply font-sans text-white bg-dark;
+  }
+  
+  * {
+    @apply box-border;
+  }
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+@layer components {
+  /* Scrollbar özelleştirmesi */
+  .scrollbar-custom::-webkit-scrollbar {
+    @apply w-2;
+  }
+
+  .scrollbar-custom::-webkit-scrollbar-track {
+    @apply bg-white/5 rounded;
+  }
+
+  .scrollbar-custom::-webkit-scrollbar-thumb {
+    @apply bg-white/20 rounded transition-all duration-300;
+  }
+
+  .scrollbar-custom::-webkit-scrollbar-thumb:hover {
+    @apply bg-white/30;
+  }
+}
+
+@layer utilities {
+  @keyframes pulse {
+    0% {
+      @apply scale-100;
+    }
+    50% {
+      @apply scale-110;
+    }
+    100% {
+      @apply scale-100;
+    }
+  }
+
+  @keyframes fadeIn {
+    from { 
+      @apply opacity-0 translate-y-2;
+    }
+    to { 
+      @apply opacity-100 translate-y-0;
+    }
+  }
 }
